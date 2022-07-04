@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Orphanet Genes/Disease API Endpoint</display-name>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>find</display-name>
+    <servlet-name>find</servlet-name>
+    <servlet-class>webservices.find</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>find</servlet-name>
+    <url-pattern>/gendis/find</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
