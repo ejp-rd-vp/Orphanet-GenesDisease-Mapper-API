@@ -14,11 +14,12 @@ ex: [http://purl.org/gendis/find?by=symbol&input=FBN1]
 You will obtain the list of diseases linked to the specific gene (by code or symbol)
 
 Returns Orphacodes and label:
+* orphaCode
 
-* "orphaCode":
-
-"http://www.orpha.net/ORDO/Orphanet_284963",
-"label":"Marfan syndrome type 1"
+> "orphaCode":
+>
+> "http://www.orpha.net/ORDO/Orphanet_284963",
+> "label":"Marfan syndrome type 1"
 
 * "inferredResourceResponses": 
 
@@ -26,14 +27,15 @@ In Orphanet Knowledge base, genes are linked to specific entities such as "subty
 
 The API will return a result expanded to this "upper" level (from subtype to disorder level) when relevant as "inferredResourceResponses" :
 
-* "inferredResourceResponses":
-
-{"orphaCode":"http://www.orpha.net/ORDO/Orphanet_558",
-"label":"Marfan syndrome"}
+> "inferredResourceResponses":
+>
+> {"orphaCode":"http://www.orpha.net/ORDO/Orphanet_558",
+> "label":"Marfan syndrome"}
 
 * "orphanetEndpoint"
 
 We added a feature that allows to query the Orphanet Resources Endpoint (Biobanks and Registries) based on the returned list of Orphacodes
+> "orphanetEndpoint": "http://155.133.131.171:8080/Orphanet/resource/search?code=300382&code=91387&code=2623&code=2833&code=284963&code=284979&code=3449&code=969&code=1885&code=558"
 
 ## Disease (orphacodes) to Genes
 This service allows query based on Orphacodes to retrieve genes linked, with HGCN code and Symbol
