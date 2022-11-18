@@ -32,7 +32,10 @@ The API will return a result expanded to this "upper" level (from subtype to dis
 "label":"Marfan syndrome"}
 
 * "orphanetEndpoint"
-* 
+
 We added a feature that allows to query the Orphanet Resources Endpoint (Biobanks and Registries) based on the returned list of Orphacodes
 
 ## Disease (orphacodes) to Genes
+This service allows query based on Orphacodes to retrieve genes linked, with HGCN code and Symbol
+
+### API parameters
