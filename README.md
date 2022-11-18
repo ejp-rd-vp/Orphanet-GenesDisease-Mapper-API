@@ -61,7 +61,7 @@ You will obtain the list of genes linked to the clinical entity orphacode concep
 * inferredResponses : the clinical entity concept (orphacode) is not directly annotated with the gene but a subtype of the entity is.
 
 Example: FBN1 gene is linked to Marfan type 1. TGFBR2 gene is linked to Marfan type 2. 
-The Marfan syndrome (orpha:558) is not linked directly to any gene, but has "marfan type 1" and "marfan type 2" as subtypes. Therefore, in order to obtain genes related to "Marfan Syndrome" we propose an inferred response including subtype.
+The Marfan syndrome (orpha:558) is not linked directly to any gene, but has "marfan type 1" and "marfan type 2" as subtypes. Therefore, in order to obtain genes related to "Marfan Syndrome" we propose an inferred response including subtypes.
 
 ex: [http://155.133.131.171:8080/GENES/gendis/find?by=orphacode&input=558]
 
