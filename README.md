@@ -37,7 +37,52 @@ The API will return a result expanded to this "upper" level (from subtype to dis
 We added a feature that allows to query the Orphanet Resources Endpoint (Biobanks and Registries) based on the returned list of Orphacodes
 > "orphanetEndpoint": "http://155.133.131.171:8080/Orphanet/resource/search?code=300382&code=91387&code=2623&code=2833&code=284963&code=284979&code=3449&code=969&code=1885&code=558"
 
-## Disease (orphacodes) to Genes
+## Disease (orphacode) to Genes
 This service allows query based on Orphacodes to retrieve genes linked, with HGCN code and Symbol
 
 ### API parameters
+
+'gendis/find?by=orphacode&input={orphacode or IRI}
+
+ex: [http://155.133.131.171:8080/GENES/gendis/find?by=orphacode&input=http://www.orpha.net/ORDO/Orphanet_284963]
+
+ex: [http://155.133.131.171:8080/GENES/gendis/find?by=orphacode&input=284963]
+
+You will obtain the list of genes linked to the clinical entity orphacode concept, with HGNC code, symbol and "relation" between orphacode concept and each gene.
+
+> directLinkedResponses	
+> hgnc	"3603"
+> symbol	"FBN1"
+> relation	"Disease-causing germline mutation(s) in"
+> inferredResponses	[]
+> apiVersion	"v0.1"
+
+* directLinkedResponses : the clinical entity concept (orphacode) is annotated with the gene in the Orphanet knowledge base
+* inferredResponses : the clinical entity concept (orphacode) is not directly annotated with the gene but a subtype of the entity is.
+
+Example: FBN1 gene is linked to Marfan type 1. TGFBR2 gene is linked to Marfan type 2. 
+The Marfan syndrome (orpha:558) is not linked directly to any gene, but has "marfan type 1" and "marfan type 2" as subtypes. Therefore, in order to obtain genes related to "Marfan Syndrome" we propose an inferred response including subtype.
+
+ex: [http://155.133.131.171:8080/GENES/gendis/find?by=orphacode&input=558]
+
+> "inferredResponses"	
+>	
+> "orphaCode":	"284963"
+> 
+> "label":	"Marfan syndrome type 1"
+> 
+  > linkedResponses
+  >  
+  > "hgnc":"3603",
+  > "symbol":"FBN1",
+  > "relation":	"Disease-causing germline mutation(s) in"
+>	
+> "orphaCode":"284973"
+> 
+> "label": "Marfan syndrome type 2"
+> 
+  > linkedResponses
+  > 	
+  > "hgnc":	"11773",
+  > "symbol":	"TGFBR2",
+  > "relation":	"Disease-causing germline mutation(s) in"
