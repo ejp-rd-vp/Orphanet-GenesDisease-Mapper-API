@@ -1,5 +1,5 @@
 # Orphanet-GenesDisease-Mapper-API
-This API focuses on Diseases and  Genes related to them, Orphanet proposes a link between genes and diseases related to them ant this API implements that.
+This API focuses on Diseases and  Genes related to them, Orphanet proposes a link between genes and diseases related to them and this API implements that.
 
 ## Gene to disease(s)
 The service allows query based on HGNC codes or gene symbol
