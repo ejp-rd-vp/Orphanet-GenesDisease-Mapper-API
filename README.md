@@ -23,7 +23,7 @@ Returns Orphacodes and label:
 
 * "inferredResourceResponses": 
 
-In Orphanet Knowledge base, genes are linked to specific entities such as "subtype of disease". For instance, FBN1 gene will be linked to Marfan type 1 and FBN2 gene will be linked to Marfan type 2. However, resources are often annotated at the level of "disorder" clinical entities. (Marfan syndrome in this example)
+In Orphanet Knowledge base, genes are linked to specific entities such as "subtype of disease". For instance, FBN1 gene will be linked to Marfan type 1 and TGFBR2 gene will be linked to Marfan type 2. However, resources are often annotated at the level of "disorder" clinical entities. (Marfan syndrome in this example)
 
 The API will return a result expanded to this "upper" level (from subtype to disorder level) when relevant as "inferredResourceResponses" :
 
